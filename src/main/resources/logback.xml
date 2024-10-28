@@ -10,10 +10,10 @@
 
     <appender name = "myFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>
-            C:\Users\siddharth.rawat.in\Desktop\Project Logs\app.log
+            ${LOGS.FOLDER}.log
         </file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>C:\Users\siddharth.rawat.in\Desktop\Project Logs\app-%d{yy-MM-dd_HH-mm}.%i.log</fileNamePattern>
+            <fileNamePattern> ${LOGS.FOLDER}-%d{yy-MM-dd_HH-mm}.%i.log</fileNamePattern>
             <maxFileSize>10MB</maxFileSize>
             <maxHistory>10</maxHistory>
         </rollingPolicy>

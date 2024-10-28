@@ -2,7 +2,6 @@ package com.Beginner.Project.Controller;
 
 import com.Beginner.Project.Model.DTO.UserDTO;
 import com.Beginner.Project.Model.Response.UserRes;
-import com.Beginner.Project.Service.EmailService;
 import com.Beginner.Project.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,12 +14,10 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private final UserService userService;
-    private EmailService emailService;
 
     @Autowired
-    public UserController(UserService userService, EmailService emailService) {
+    public UserController(UserService userService) {
         this.userService = userService;
-        this.emailService = emailService;
     }
 
     @PutMapping("/update")
